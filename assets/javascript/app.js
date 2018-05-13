@@ -26,7 +26,7 @@ function resetMap() {
         zoom: 3,
         center: { lat: 37.50, lng: -95.35 }
     });
-    
+
     $("#galleryName").text("");
     $("#galleryAddr").text("");
 };
@@ -88,15 +88,15 @@ $(document).ready(function () {
     //Artsy API Token query
     function initializeQuery() {
         $.ajax({
-            url: tokenUrl + "client_id=" + clientID + "&client_secret=" + clientSecret,
-            method: "POST"
+            url: tokenUrl + 'client_id=' + clientID + '&client_secret=' + clientSecret,
+            method: 'POST'
         }).done(function (res) {
             console.log(res.token)
             xappToken = res.token;
         });
     }
 
-    var url = "https://api.artsy.net/api/"
+    var url = 'https://api.artsy.net/api/'
 
     var artistId;
 
